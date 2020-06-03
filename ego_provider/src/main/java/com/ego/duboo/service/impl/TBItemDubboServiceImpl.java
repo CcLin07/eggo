@@ -55,7 +55,7 @@ public class TBItemDubboServiceImpl implements TBItemDubboService {
 
     @Override
     @Transactional
-    public int updateStatusByIds(long[] ids, byte status) {
+    public int updateStatusByIds(long[] ids, byte status) throws DaoException{
         int flag =0;
         for (long id : ids) {
             TbItem tbItem = new TbItem();

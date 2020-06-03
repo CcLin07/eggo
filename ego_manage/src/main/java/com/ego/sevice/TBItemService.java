@@ -1,6 +1,7 @@
 package com.ego.sevice;
 
 import com.ego.commons.pojo.UIdatagrid;
+import com.ego.commons.pojo.exception.DaoException;
 
 /**
  * 完成视图逻辑
@@ -20,7 +21,7 @@ public interface TBItemService {
      * @param rows 每页大小
      * @return easy要的返回值
      */
-    UIdatagrid showItem(int page,int rows);
+    UIdatagrid showItem(int page,int rows) throws DaoException;
 
 
 }

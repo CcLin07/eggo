@@ -1,6 +1,7 @@
 package com.ego.dubbo.service;
 
 
+import com.ego.commons.pojo.exception.DaoException;
 import com.ego.pojo.TbItem;
 
 import java.util.List;
@@ -28,9 +29,9 @@ public interface TBItemDubboService {
     /**
      * 批量修改 商品状态
      * 事务一定要子啊provider方
-     * @param id 所有要修改的id
+     * @param ids 所有要修改的id
      * @param status 所有要修改的状态
      * @return 修改状态 成功1 失败 0
      */
-    int updateStatusByIds(long[] ids,byte status);
+    int updateStatusByIds(long[] ids,byte status) throws DaoException;
 }
