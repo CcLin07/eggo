@@ -6,3 +6,9 @@ dubbo:
 
 server:
   port: 80
+#SpringMVC视图解析器
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
