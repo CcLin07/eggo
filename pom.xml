@@ -19,6 +19,7 @@
         <module>ego_api</module>
         <module>ego_provider</module>
         <module>ego_manage</module>
+        <module>ego_commons</module>
     </modules>
 
     <!-- Spring Boot的父项目，声明所有Spring Boot相关版本 -->

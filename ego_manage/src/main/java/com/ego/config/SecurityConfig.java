@@ -7,11 +7,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import java.net.PasswordAuthentication;
-
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
     /**
      * 密码解析器
      * @return
@@ -20,14 +17,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        //自定义用户登录页面
         http.formLogin()
+                //登录请求
+                .loginProcessingUrl("/login")
+                //登录成功后转发
+                .successForwardUrl("/loginSuccess")
                 //登录页面
-                .loginPage("login");
-                //页面跳转请求
-                .loginProcessingUrl("/")
+                .loginPage("/");
+
+        //放行静态页面的操作
+        http.authorizeRequests()
+                // 千万不要忘记放行静态资源
+                .antMatchers("/","/css/**","/js/**").permitAll()
+                .anyRequest().authenticated();
+        //禁用csrf
+        http.csrf().disable();
     }
 }
