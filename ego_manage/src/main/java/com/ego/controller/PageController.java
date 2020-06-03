@@ -3,6 +3,7 @@ package com.ego.controller;
 
 import com.ego.commons.pojo.EgoResult;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -12,6 +13,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class PageController {
+
+    @RequestMapping("/{page}")
+    public String showPage(@PathVariable String page){
+        return page;
+    }
+
     /**
      * 登录页面
      *
@@ -19,7 +26,6 @@ public class PageController {
      */
     @RequestMapping("/")
     public String login() {
-        System.out.println("执行控制器");
         return "login";
     }
 
@@ -42,5 +48,7 @@ public class PageController {
     public EgoResult loginSuccess(){
         return EgoResult.ok();
     }
+
+
 
 }
