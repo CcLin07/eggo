@@ -31,7 +31,7 @@
 
     <properties>
         <springframework-version>5.2.4.RELEASE</springframework-version>
-        <spring-version>2.2.7.RELEASE</spring-version>
+        <spring-version>2.5.12</spring-version>
         <dubbo-version>2.7.5</dubbo-version>
         <curator-version>4.2.0</curator-version>
         <mybatis-springboot-version>2.1.1</mybatis-springboot-version>
