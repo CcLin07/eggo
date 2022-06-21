@@ -35,7 +35,7 @@
         <dubbo-version>2.7.5</dubbo-version>
         <curator-version>4.2.0</curator-version>
         <mybatis-springboot-version>2.1.1</mybatis-springboot-version>
-        <mysql-driver-version>8.0.18</mysql-driver-version>
+        <mysql-driver-version>8.0.28</mysql-driver-version>
         <jstl-version>1.2</jstl-version>
         <tomcat-jsp-version>9.0.31</tomcat-jsp-version>
         <druid-springboot-version>1.1.10</druid-springboot-version>
