@@ -44,7 +44,7 @@
         <fastdfs-version>1.27</fastdfs-version>
         <common-lang3-version>3.4</common-lang3-version>
         <httpclient-version>4.5.10</httpclient-version>
-        <jackson-version>2.10.3</jackson-version>
+        <jackson-version>2.12.6.1</jackson-version>
         <servlet-version>4.0.1</servlet-version>
         <spring-session-version>2.2.2.RELEASE</spring-session-version>
     </properties>
