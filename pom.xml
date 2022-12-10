@@ -30,7 +30,7 @@
     </parent>
 
     <properties>
-        <springframework-version>5.2.4.RELEASE</springframework-version>
+        <springframework-version>6.0.0</springframework-version>
         <spring-version>2.2.7.RELEASE</spring-version>
         <dubbo-version>2.7.5</dubbo-version>
         <curator-version>4.2.0</curator-version>
